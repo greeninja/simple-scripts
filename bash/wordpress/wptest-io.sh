@@ -5,7 +5,7 @@
 
 cd /var/www/html
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-curl -OL https://raw.githubusercontent.com/manovotny/wptest/master/wptest.xml
+curl https://raw.githubusercontent.com/manovotny/wptest/master/wptest.xml | sed 's/http:\/\/wptest.io\/demo\/wp-content\/uploads\//http:\/\/wptest.io\/demo\/wp-content\/uploads\/sites\/2\//g' > wptest.xml
 # Install import plugin
 php wp-cli.phar plugin install wordpress-importer --activate
 php wp-cli.phar plugin install jetpack --activate
