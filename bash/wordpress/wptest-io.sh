@@ -3,7 +3,7 @@
 # Installs wp-cli as a php script, installs all tests from http://wptest.io and cleans up after itself.
 # Assumes web dir is /var/www/html
 
-cd /var/www/html
+# cd /var/www/html
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 curl https://raw.githubusercontent.com/manovotny/wptest/master/wptest.xml | sed 's/http:\/\/wptest.io\/demo\/wp-content\/uploads\//http:\/\/wptest.io\/demo\/wp-content\/uploads\/sites\/2\//g' > wptest.xml
 # Install import plugin
