@@ -12,5 +12,5 @@ url=$(php wp-cli.phar option get siteurl)
 user=$(php wp-cli.phar user get 1 | grep user_login | awk '{print $2}')
 
 echo "Admin Url: $url/wp-admin"
-echo "Key:       $key"
 echo "User:      $user"
+echo "Key:       $key"
