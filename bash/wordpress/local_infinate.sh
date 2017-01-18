@@ -6,7 +6,7 @@
 # cd /var/www/html
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 # Install import plugin
-php wp-cli.phar plugin install iwp-client --activate
+php56-cli wp-cli.phar plugin install iwp-client --activate
 key=$(php wp-cli.phar option get iwp_client_activate_key)
 url=$(php wp-cli.phar option get siteurl)
 user=$(php wp-cli.phar user get 1 | grep user_login | awk '{print $2}')
