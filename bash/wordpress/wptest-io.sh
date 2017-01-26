@@ -7,10 +7,10 @@
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 curl https://raw.githubusercontent.com/manovotny/wptest/master/wptest.xml | sed 's/http:\/\/wptest.io\/demo\/wp-content\/uploads\//http:\/\/wptest.io\/demo\/wp-content\/uploads\/sites\/2\//g' > wptest.xml
 # Install import plugin
-php56-cli wp-cli.phar plugin install wordpress-importer --activate
-php56-cli wp-cli.phar plugin install jetpack --activate
+php wp-cli.phar plugin install wordpress-importer --activate
+php wp-cli.phar plugin install jetpack --activate
 # Now install all the stuff from http://wptest.io
-php56-cli wp-cli.phar import wptest.xml --authors=create
+php wp-cli.phar import wptest.xml --authors=create
 
 # Now clean up
 rm wptest.xml
